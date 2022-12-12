@@ -1,9 +1,9 @@
 export class Ingredient{
-    constructor(){
+    constructor(id,name,description,imageURL,imageSmallURL){
         this.id=id;
         this.name=name;
         this.description=description;
-        this.image=image;
-        this.imageSmall=imageSmall;
+        this.imageURL=imageURL;
+        this.imageSmallURL=imageSmallURL;
     }
 }

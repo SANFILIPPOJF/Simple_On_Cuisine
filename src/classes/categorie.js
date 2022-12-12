@@ -1,8 +1,8 @@
 export class Categorie{
-    constructor(){
+    constructor(id,name,imageURL,description){
         this.id=id;
         this.name=name;
-        this.image=image;
+        this.imageURL=imageURL;
         this.description=description;
     }
 }
