@@ -1,5 +1,7 @@
+import { Titre } from "../components/Titre";
+
 export function Accueil () {
     return(
-        <h1>Simple, on cuisine</h1>
+        <Titre></Titre>
     )
 }
