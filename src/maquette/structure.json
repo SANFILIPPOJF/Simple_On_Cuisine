@@ -1,0 +1,390 @@
+{
+    "id"          : "Application" ,
+    "color"       : "gris" ,
+    "titre"       : "Application" ,
+    "description" : "Application pour trouver des recettes de cuisine en fonction de leur Nom, Catégorie ou Ingrédients. Il est possible de memoriser nos recettes préférées" ,
+    "children"    : [
+        {
+            "id"          : "Header" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Header" ,
+            "description" : "L'En-Tete de notre site, il est commun à toutes les pages et permet la navigation entre elles" ,
+            
+            "liens"       : [
+                {
+                    "url" :"#Accueil",
+                    "titre" : "Présent sur la page d'accueil"
+                },
+                {
+                    "url" :"#PageNom",
+                    "titre" : "Présent sur la page des Noms"
+                },
+                {
+                    "url" :"#PageCat",
+                    "titre" : "Présent sur la page des Catégories"
+                },
+                {
+                    "url" :"#PageIngre",
+                    "titre" : "Présent sur la page d'Accueil"
+                },
+                {
+                    "url" :"#PageFavoris",
+                    "titre" : "Présent sur la page des Favoris"
+                }
+            ],
+            "children"    : [
+                
+                {
+                    "color"       : "cyan" ,
+                    "titre"       : "Titre du site" ,
+                    "description" : "Un simple titre" 
+                },
+                {
+                    "color"       : "cyan" ,
+                    "titre"       : "Navigation" ,
+                    "description" : "La barre de Navigation, permetant de changer de page" ,
+                    "children"    : [
+                        {
+                            "color"       : "vert" ,
+                            "titre"       : "Vers Accueil" ,
+                            "description" : "" ,
+                            "liens"       : [
+                                {
+                                    "url" :"#Accueil",
+                                    "titre" : "Vers la page d'accueil"
+                                }
+                            ]
+                        },
+                        {
+                            "color"       : "vert" ,
+                            "titre"       : "Vers Recherche par Nom" ,
+                            "description" : "" ,
+                            "liens"       : [
+                                {
+                                    "url" :"#PageNom",
+                                    "titre" : "Vers la page des Noms"
+                                }
+                            ]
+                        },
+                        {
+                            "color"       : "vert" ,
+                            "titre"       : "Vers Recherche par Catégorie" ,
+                            "description" : "" ,
+                            "liens"       : [
+                                {
+                                    "url" :"#PageCat",
+                                    "titre" : "Vers la page des Catégories"
+                                }
+                            ]
+                        },
+                        {
+                            "color"       : "vert" ,
+                            "titre"       : "Vers Recherche par Ingrédients" ,
+                            "description" : "" ,
+                            "liens"       : [
+                                {
+                                    "url" :"#PageIngre",
+                                    "titre" : "Vers la page d'Accueil"
+                                }
+                            ]
+                        },
+                        {
+                            "color"       : "vert" ,
+                            "titre"       : "Vers Favoris" ,
+                            "description" : "" ,
+                            "liens"       : [
+                                {
+                                    "url" :"#PageFavoris",
+                                    "titre" : "Vers la page des Favoris"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id"          : "Accueil" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Page d'accueil" ,
+            "description" : "Page de présentation du site" ,
+            "liens"       : [
+                {
+                    "url"   :   "#Header",
+                    "titre" :   "Toutes les pages contiennent un Header"
+                }
+            ],
+            "children"    : [
+                
+                {
+                    "color"       : "cyan" ,
+                    "titre"       : "Presentation du site" ,
+                    "description" : "La description" 
+                }
+            ]
+        },
+        {
+            "id"          : "PageNom" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Page des Nom" ,
+            "description" : "Page permetant de rechercher les recettes par Nom" ,
+            "liens"       : [
+                {
+                    "url"   :   "#Header",
+                    "titre" :   "Toutes les pages contiennent un Header"
+                }
+            ],
+            "children"    : [
+                
+                {
+                    "color"       : "vert" ,
+                    "titre"       : "Barre de recherche par nom" ,
+                    "description" : "L'Utilisateur s'apprete à faire une recheche par nom" ,
+                    "children"    : [
+                        {
+                            "color"       : "cyan" ,
+                            "titre"       : "La PREMIERE lettre tapée :" ,
+                            "description" : "Il faut lui proposer une liste de recette commençant par cette lettre" ,
+                            "children"    : [
+                                {
+                                    "color"       : "rouge" ,
+                                    "titre"       : "API => Requete par premiere lettre" ,
+                                    "description" : "On effectue une requete à l'API pour obtenir cette liste" ,
+                                    "children"    : [
+                                        {
+                                            "color"       : "cyan" ,
+                                            "titre"       : "Afficher les correspondances avec cette lettre" ,
+                                            "description" : "Affichage du contenu de la liste" ,
+                                            "children"    : []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "color"       : "cyan" ,
+                            "titre"       : "Validation de la recheche :" ,
+                            "description" : "" ,
+                            "children"    : [
+                                
+                                {
+                                    "color"       : "rouge" ,
+                                    "titre"       : "API => Requete par nom" ,
+                                    "description" : "" ,
+                                    "children"    : [
+                                        {
+                                            "color"       : "vert" ,
+                                            "titre"       : "Afficher la Recette correspondante" ,
+                                            "description" : "" 
+                                        },
+                                        {
+                                            "color"       : "cyan" ,
+                                            "titre"       : "ou pas de recette portant ce nom" ,
+                                            "description" : "" 
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id"          : "PageCat" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Page des Catégories" ,
+            "description" : "" ,
+            "liens"       : [
+                {
+                    "url"   :   "#Header",
+                    "titre" :   "Toutes les pages contiennent un Header"
+                }
+            ],
+            "children"    : [
+                {
+                    "color"       : "rouge" ,
+                    "titre"       : "API => Requête toutes les catégories" ,
+                    "description" : "" ,
+                    "children"    : [
+                        {
+                            "color"       : "mauve" ,
+                            "titre"       : "Afficher toutes les catégories" ,
+                            "description" : "" ,
+                            "children"    : []
+                        }
+                    ]
+                },
+                {
+                    "color"       : "vert" ,
+                    "titre"       : "l'utilisateur choisit une catégorie" ,
+                    "description" : "" ,
+                    "children"    : [
+                        {
+                            "color"       : "rouge" ,
+                            "titre"       : "API => Requête de la catégorie sélectionnée" ,
+                            "description" : "" ,
+                            "children"    : [
+                                {
+                                    "color"       : "vert" ,
+                                    "titre"       : "Affichage de la recette" ,
+                                    "description" : "" ,
+                                    "children"    : []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id"          : "PageIngre" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Page des Ingrédients" ,
+            "description" : "" ,
+            "liens"       : [
+                {
+                    "url"   :   "#Header",
+                    "titre" :   "Toutes les pages contiennent un Header"
+                }
+            ],
+            "children"    : [
+                {
+                    "color"       : "rouge" ,
+                    "titre"       : "API=>Requete liste ingrédients" ,
+                    "description" : "" ,
+                    "children"    : []
+                },
+                {
+                    "color"       : "vert" ,
+                    "titre"       : "Utilisation de la Barre de recherche par ingrédients" ,
+                    "description" : "" ,
+                    "children"    : [
+                        {
+                            "color"       : "mauve" ,
+                            "titre"       : "Affichage ingrédients sélectionnés" ,
+                            "description" : "" ,
+                            "children"    : [
+                                {
+                                    "color"       : "vert" ,
+                                    "titre"       : "Sélection d'un ingrédient" ,
+                                    "description" : "" ,
+                                    "children"    : [
+                                        {
+                                            "color"       : "rouge" ,
+                                            "titre"       : "API=>Requete recettes par ingrédient" ,
+                                            "description" : "" ,
+                                            "children"    : [
+                                                {
+                                                    "color"       : "vert" ,
+                                                    "titre"       : "Affichage des recettes contenant l' ingrédient" ,
+                                                    "description" : "" ,
+                                                    "children"    : []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id"          : "PageFavoris" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Page des Favoris" ,
+            "description" : "" ,
+            "liens"       : [
+                {
+                    "url"   :   "#Header",
+                    "titre" :   "Toutes les pages contiennent un Header"
+                }
+            ],
+            "children"    : [
+                {
+                    "color"       : "bleu" ,
+                    "titre"       : "Regarder dans le local storage si il y a déjà des favoris sauvegardés" ,
+                    "description" : "" ,
+                    "children"    : [
+                        {
+                            "color"       : "cyan" ,
+                            "titre"       : "Non" ,
+                            "description" : "" ,
+                            "children"    : [
+                                {
+                                    "color"       : "cyan" ,
+                                    "titre"       : "aucun résultat correspondant" ,
+                                    "description" : "" ,
+                                    "children"    : []
+                                }
+                            ]
+                        },
+                        {
+                            "color"       : "cyan" ,
+                            "titre"       : "Oui" ,
+                            "description" : "" ,
+                            "children"    : [
+                                {
+                                    "color"       : "bleu" ,
+                                    "titre"       : "Pour chaque id dans le Iocal storage" ,
+                                    "description" : "" ,
+                                    "children"    : [
+                                        {
+                                            "color"       : "rouge" ,
+                                            "titre"       : "API => Recettes par ingredient" ,
+                                            "description" : "" ,
+                                            "children"    : [
+                                                {
+                                                    "color"       : "vert" ,
+                                                    "titre"       : "Affichage de Recettes" ,
+                                                    "description" : "" ,
+                                                    "children"    : []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id"          : "Recette" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Affichage Recette" ,
+            "description" : "" ,
+            "children"    : [
+                {
+                    "color"       : "bleu" ,
+                    "titre"       : "Ajouter une nouvelle recette dans le local storage" ,
+                    "description" : "" ,
+                    "children"    : []
+                },
+                {
+                    "color"       : "bleu" ,
+                    "titre"       : "Retirer des favoris" ,
+                    "description" : "" ,
+                    "children"    : []
+                }
+            ]
+        },
+        {
+            "id"          : "Categorie" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Affichage Categorie" ,
+            "description" : "" ,
+            "children"    : []
+        },
+        {
+            "id"          : "Ingredient" ,
+            "color"       : "mauve prime" ,
+            "titre"       : "Affichage Ingredient" ,
+            "description" : "" ,
+            "children"    : []
+        }
+    ]
+}
