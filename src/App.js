@@ -18,7 +18,7 @@ function App() {
       <CuisineNavBar></CuisineNavBar>
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*       <MealByRandom></MealByRandom> */}
-      {/*      <ListByCategory></ListByCategory>*/}
+      {/*      <ListByCategorySeafood></ListByCategory>*/}
       {/*       <MealByID id="52846"></MealByID>*/}
       {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
     </div>
