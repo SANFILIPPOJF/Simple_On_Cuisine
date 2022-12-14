@@ -28,13 +28,12 @@ export function MealByRandom() {
     }
     return (
         <>
-            <div className="App">
+            <div className="App ms-auto">
                 {loading && <p>Loading...</p>}
                 {!loading && <p>Fetched data</p>}
-                <Accordion>
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header className="text-center">
-                            <Figure>
+                <Accordion className="justify-content-end">
+                        <Accordion.Header className="justify-content-end">
+                            <Figure className="mx-auto">
                                 <Figure.Image
                                     width={400}
                                     height={400}
@@ -47,7 +46,7 @@ export function MealByRandom() {
                             </Figure>
                             </Accordion.Header>
                         <Accordion.Body>
-                            <Card style={{ width: '18rem' }}>
+                            <Card style={{ width: '50rem' }}>
                                 <ListGroup variant="flush">
                                     <ListGroup.Item><h5>Category :</h5> {data?.meals[0].strCategory}</ListGroup.Item>
                                     <ListGroup.Item><h5>Area :</h5> {data?.meals[0].strArea}</ListGroup.Item>
@@ -77,19 +76,18 @@ export function MealByRandom() {
                                         {data?.meals[0].strInstructions}
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Button href={data?.meals[0].strYoutube} variant="danger" size="lg">
+                                    <Button href={data?.meals[0].strYoutube} target="_blank" variant="danger" size="lg">
                                         YouTube Recipe
                                     </Button>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Button href={data?.meals[0].strSource} variant="info" size="lg">
+                                    <Button href={data?.meals[0].strSource} target="_blank" variant="info" size="lg">
                                             Source
                                         </Button>
                                     </ListGroup.Item>
                                 </ListGroup>
                             </Card>
                         </Accordion.Body>
-                    </Accordion.Item>
                 </Accordion>
             </div>
         </>

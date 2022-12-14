@@ -3,8 +3,8 @@ import { BarreDeRecherche } from './components/BarreDeRecherche';
 import { CuisineNavBar } from "./components/NavBar";
 import { Titre } from './components/Titre';
 import { BoutonRandom } from './components/BoutonRandom';
-import { MealByRandom } from './requests/mealByRandom';
-import { AffichageRecette } from './components/affichageRecette';
+/* import { MealByRandom } from './requests/mealByRandom'; */
+/* import { AffichageRecette } from './components/affichageRecette'; */
 function App() {
   return (
     <div className='App'>
