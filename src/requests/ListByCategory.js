@@ -25,20 +25,6 @@ useEffect(() => {
 if (loading){
     return (<p>Loading...</p>)
 }
-return (
-    <>
-        <div className="App">
-            {loading && <p>Loading...</p>}
-            {!loading && <p>Fetched data</p>}
-            <Accordion className='' defaultActiveKey="0">
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header><h2 className="titre" style={{ fontSize: "3rem", color: "teal" }}>{data?.meals[0].strMeal}</h2><br/>
-                    <img src={data?.meals[0].strMealThumb} alt="image" /></Accordion.Header>
-                    <Accordion.Body>
-                    </Accordion.Body>
-                </Accordion.Item>
-            </Accordion>
-        </div>
-    </>
-);
+
+
 }
