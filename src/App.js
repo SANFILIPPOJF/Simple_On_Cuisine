@@ -5,6 +5,7 @@ import { Titre } from './components/Titre';
 import { BoutonRandom } from './components/BoutonRandom';
 import { Recette } from './components/affichageRecette';
 import {Randoms} from './requests/Randomm';
+import { MealByID } from './requests/mealByID';
 function App() {
   return (
     <div className='App'>
@@ -12,7 +13,7 @@ function App() {
       <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
       <Recette></Recette>
-      <Randoms></Randoms>
+      <MealByID> </MealByID>
     </div>
 
   );
