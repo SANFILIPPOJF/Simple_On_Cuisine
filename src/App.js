@@ -10,6 +10,7 @@ import { ListByCategory } from './requests/ListByCategory';
 /* import { AffichageRecette } from './components/affichageRecette'; */
 import { MealByID } from './requests/mealByID';
 import { ListByCountry } from './requests/ListByCountry';
+import { ListByIngredient } from './requests/ListByIngredient';
 function App() {
   return (
     <div className='App'>
@@ -21,6 +22,7 @@ function App() {
       {/*      <ListByCategorySeafood></ListByCategory>*/}
       {/*       <MealByID id="52846"></MealByID>*/}
       {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
+      {/*<ListByIngredient ingredient="chicken_breast"></ListByIngredient>*/}
     </div>
   );
 }

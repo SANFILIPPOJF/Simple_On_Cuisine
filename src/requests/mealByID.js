@@ -4,7 +4,7 @@ export function MealByID(props) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    fetch(`www.themealdb.com/api/json/v1/1/lookup.php?i=52772`)
+    fetch(`www.themealdb.com/api/json/v1/1/lookup.php?i=${props.meals}`)
         .then(res => res.json())
         .then(
             (result) => {
