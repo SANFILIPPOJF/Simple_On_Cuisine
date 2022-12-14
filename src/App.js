@@ -4,7 +4,7 @@ import { CuisineNavBar } from "./components/NavBar";
 import { Titre } from './components/Titre';
 import { BoutonRandom } from './components/BoutonRandom';
 import { Recette } from './components/affichageRecette';
-import {Randoms} from './requests/Randomm';
+import { MealByRandom } from './requests/mealByRandom';
 import { MealByID } from './requests/mealByID';
 function App() {
   return (
@@ -12,8 +12,7 @@ function App() {
       <Titre></Titre>
       <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
-      <Recette></Recette>
-      <MealByID> </MealByID>
+
     </div>
 
   );
