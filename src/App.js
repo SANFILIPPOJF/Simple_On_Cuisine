@@ -13,13 +13,13 @@ function App() {
       <Titre></Titre>
       <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
-{/*       <AffichageRecette></AffichageRecette> */}
-{/*       <MealByRandom></MealByRandom> */}
-{ /*      <ListByCategory></ListByCategory>*/ }
-{/*       <MealByID id="52846"></MealByID>*/}
-  
-    </div> 
- );
+      {/*       <AffichageRecette></AffichageRecette> */}
+      {/*       <MealByRandom></MealByRandom> */}
+      { /*      <ListByCategory></ListByCategory>*/}
+      {/*       <MealByID id="52846"></MealByID>*/}
+
+    </div>
+  );
 }
 
 export default App;

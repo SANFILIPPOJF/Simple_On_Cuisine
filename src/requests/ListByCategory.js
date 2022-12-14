@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Accordion from 'react-bootstrap/Accordion';
 
 
-export function ListByCategory() {
+export function ListByCategory(props) {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -10,13 +10,13 @@ export function ListByCategory() {
 
 useEffect(() => {
 
-    const categorie = { method: 'GET' };
-    fetch('http://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood', categorie)
+    const category = { method: 'GET' };
+    fetch(`http://www.themealdb.com/api/json/v1/1/filter.php?c=${props.category}`)
         .then(response => response.json())
-        .then((categorie) => {
-            console.log(randomMeal.meals[0].strMeal);
+        .then((category) => {
+            console.log(category.meals[0].strMeal);
             setLoading(false);
-            setData(randomMeal);
+            setData(category);
         })
         .catch((e) => {
             console.error(`An error occurred: ${e}`)
