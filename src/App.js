@@ -6,6 +6,8 @@ import { BoutonRandom } from './components/BoutonRandom';
 import { MealByRandom } from './requests/mealByRandom';
 import { AffichageRecette } from './components/affichageRecette';
 import { ListByCategory } from './requests/ListByCategory';
+/* import { MealByRandom } from './requests/mealByRandom'; */
+/* import { AffichageRecette } from './components/affichageRecette'; */
 import { MealByID } from './requests/mealByID';
 import { ListByCountry } from './requests/ListByCountry';
 function App() {
