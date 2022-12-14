@@ -3,16 +3,16 @@ import { BarreDeRecherche } from './components/BarreDeRecherche';
 import { CuisineNavBar } from "./components/NavBar";
 import { Titre } from './components/Titre';
 import { BoutonRandom } from './components/BoutonRandom';
-import { MealByID } from './requests/mealByID';
-
+import { Recette } from './components/affichageRecette';
+import {Randoms} from './requests/Randomm';
 function App() {
   return (
     <div className='App'>
       <Titre></Titre>
-      <BarreDeRecherche></BarreDeRecherche>
+      <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
-      <BoutonRandom></BoutonRandom>
-      <MealByID Id="10"></MealByID>
+      <Recette></Recette>
+      <Randoms></Randoms>
     </div>
 
   );
