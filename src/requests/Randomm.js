@@ -25,7 +25,7 @@ export function Randoms() {
         <>
             <div className="App">
                 {<p>Fetched data</p>}
-                <p>name:{data?.meals[0].strMeal}</p>
+                <p>name: {data?.meals[0].strMeal}</p>
             </div>
         </>
     );
