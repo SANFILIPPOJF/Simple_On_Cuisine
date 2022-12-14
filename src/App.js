@@ -4,15 +4,15 @@ import { CuisineNavBar } from "./components/NavBar";
 import { Titre } from './components/Titre';
 import { BoutonRandom } from './components/BoutonRandom';
 import { Recette } from './components/affichageRecette';
-import {Randoms} from './requests/Randomm';
+import { MealByRandom } from './requests/mealByRandom';
 function App() {
   return (
     <div className='App'>
       <Titre></Titre>
       <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
-      <Recette></Recette>
-      <Randoms></Randoms>
+{/*       <Recette></Recette> */}
+      <MealByRandom></MealByRandom>
     </div>
 
   );
