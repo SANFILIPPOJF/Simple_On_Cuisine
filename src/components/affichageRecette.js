@@ -3,18 +3,13 @@ import Figure from 'react-bootstrap/Figure';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import { useState } from 'react';
+
 
 
 export function AffichageRecette (props) {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
     return(
         <>
             <div className="App ms-auto">
-                {loading && <p>Loading...</p>}
-                {!loading && <p>Fetched data</p>}
                 <Accordion className="justify-content-end">
                         <Accordion.Header className="justify-content-end">
                             <Figure className="mx-auto">

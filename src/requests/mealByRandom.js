@@ -1,16 +1,11 @@
 import { useState, useEffect } from "react";
-import Accordion from 'react-bootstrap/Accordion';
-import Figure from 'react-bootstrap/Figure';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
 import { AffichageRecette } from "../components/affichageRecette";
 
 export function MealByRandom() {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
