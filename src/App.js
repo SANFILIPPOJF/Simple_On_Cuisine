@@ -6,6 +6,7 @@ import { BoutonRandom } from './components/BoutonRandom';
 import { MealByRandom } from './requests/mealByRandom';
 /* import { AffichageRecette } from './components/affichageRecette'; */
 import { MealByID } from './requests/mealByID';
+import { ListByTitre } from './requests/listByTitre';
 import { ListByCountry } from './requests/ListByCountry';
 import { ListingArea } from './requests/ListingArea';
 function App() {
@@ -14,6 +15,12 @@ function App() {
       <Titre></Titre>
       <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
+      {/*       <AffichageRecette></AffichageRecette> */}
+      {/*       <MealByRandom></MealByRandom> */}
+      {/*      <ListByCategorySeafood></ListByCategory>*/}
+      {/*       <MealByID id="52846"></MealByID>*/}
+      {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
+      {/*<ListByIngredient ingredient="chicken_breast"></ListByIngredient>*/}
 {/*       <AffichageRecette></AffichageRecette> */}
       <MealByRandom></MealByRandom>
 {/*       <MealByID id="52846"></MealByID>*/}

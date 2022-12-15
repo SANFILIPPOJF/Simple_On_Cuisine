@@ -18,7 +18,7 @@ export function MealByRandom() {
             .then((randomMeal) => {
                 console.log(randomMeal.meals[0].strMeal);
                 setLoading(false);
-                setData(randomMeal);
+                setData(randomMeal.meals);
             })
             .catch((e) => {
                 console.error(`An error occurred: ${e}`)
@@ -28,6 +28,6 @@ export function MealByRandom() {
         return (<p>Loading...</p>)
     }
     return (
-        <AffichageRecette></AffichageRecette>
+        <AffichageRecette mealArray={data}></AffichageRecette>
     );
 }
