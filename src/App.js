@@ -7,6 +7,7 @@ import { MealByRandom } from './requests/mealByRandom';
 /* import { AffichageRecette } from './components/affichageRecette'; */
 import { MealByID } from './requests/mealByID';
 import { ListByCountry } from './requests/ListByCountry';
+import { ListingArea } from './requests/ListingArea';
 function App() {
   return (
     <div className='App'>
@@ -17,6 +18,7 @@ function App() {
       <MealByRandom></MealByRandom>
 {/*       <MealByID id="52846"></MealByID>*/}
 {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
+      <ListingArea strArea = "#action/3.2"></ListingArea>
     </div>
   );
 }

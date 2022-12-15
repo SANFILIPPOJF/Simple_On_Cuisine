@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 
 
-export function ListingArea (area){
+export function ListingArea (strArea){
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const ListingArea = (areaArray.map(area,meals.strArea) =>(<li key ={meals.strArea}>{meals.strArea} </li>
+    ));
 
     useEffect( ()=> {
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`)
             .then(response => response.json())
-            .then((area) => {
+            .then((areaArray) => {
                 setLoading(false);
-                console.log(area.strArea);
-                setData(area.strArea);
+                console.log(areaArray);
+                setData(areaArray.meals);
             })
             .catch((e) => {
                 console.error(`An error occurred: ${e}`)
@@ -25,8 +27,6 @@ export function ListingArea (area){
     return (
         <>
         <div className = "App">
-            {loading && <p>Loading...</p>}
-            {!loading && <p>Fetched data</p>}
             </div>
             </>
     );
