@@ -6,6 +6,7 @@ import { BoutonRandom } from './components/BoutonRandom';
 import { MealByRandom } from './requests/mealByRandom';
 import { AffichageRecette } from './components/affichageRecette';
 import { MealByID } from './requests/mealByID';
+import { ListByTitre } from './requests/listByTitre';
 function App() {
   return (
     <div className='App'>
@@ -15,6 +16,8 @@ function App() {
 {/*       <AffichageRecette></AffichageRecette> */}
 {/*       <MealByRandom></MealByRandom> */}
 {/*       <MealByID id="52846"></MealByID>*/}
+      <ListByTitre titre="salmon"></ListByTitre>
+
     </div>
   );
 }
