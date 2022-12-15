@@ -4,7 +4,6 @@ import { CuisineNavBar } from "./components/NavBar";
 import { Titre } from './components/Titre';
 import { BoutonRandom } from './components/BoutonRandom';
 import { MealByRandom } from './requests/mealByRandom';
-/* import { AffichageRecette } from './components/affichageRecette'; */
 import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
 import { ListByCountry } from './requests/ListByCountry';
@@ -24,7 +23,8 @@ function App() {
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*      <MealByRandom></MealByRandom>*/}
       {/*       <MealByID id="52846"></MealByID>*/}
-      <ListByCountry area="Canadian"></ListByCountry>
+      <ListingArea></ListingArea>
+{/*      <ListByCountry area="French"></ListByCountry>*/}
     </div>
   );
 }
