@@ -5,7 +5,7 @@ export function MealByRandom() {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)

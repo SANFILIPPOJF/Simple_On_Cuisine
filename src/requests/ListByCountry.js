@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import ListGroup from 'react-bootstrap/ListGroup';
+
 import { AffichageRecette } from "../components/affichageRecette";
 
 export function ListByCountry(props) {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${props.area}`)
