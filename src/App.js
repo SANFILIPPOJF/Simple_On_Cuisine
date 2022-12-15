@@ -20,10 +20,10 @@ function App() {
       {/*       <MealByID id="52846"></MealByID>*/}
       {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
       {/*<ListByIngredient ingredient="chicken_breast"></ListByIngredient>*/}
-{/*       <AffichageRecette></AffichageRecette> */}
-      <MealByRandom></MealByRandom>
-{/*       <MealByID id="52846"></MealByID>*/}
-{/*      <ListByCountry area="Canadian"></ListByCountry>*/}
+      {/*       <AffichageRecette></AffichageRecette> */}
+      {/*      <MealByRandom></MealByRandom>*/}
+      {/*       <MealByID id="52846"></MealByID>*/}
+      <ListByCountry area="Canadian"></ListByCountry>
     </div>
   );
 }
