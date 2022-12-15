@@ -14,6 +14,12 @@ function App() {
       <Titre></Titre>
       <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
+      {/*       <AffichageRecette></AffichageRecette> */}
+      {/*       <MealByRandom></MealByRandom> */}
+      {/*      <ListByCategorySeafood></ListByCategory>*/}
+      {/*       <MealByID id="52846"></MealByID>*/}
+      {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
+      {/*<ListByIngredient ingredient="chicken_breast"></ListByIngredient>*/}
 {/*       <AffichageRecette></AffichageRecette> */}
       <MealByRandom></MealByRandom>
 {/*       <MealByID id="52846"></MealByID>*/}
