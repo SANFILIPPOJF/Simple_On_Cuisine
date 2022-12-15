@@ -23,8 +23,8 @@ function App() {
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*      <MealByRandom></MealByRandom>*/}
       {/*       <MealByID id="52846"></MealByID>*/}
-      <ListingArea></ListingArea>
-{/*      <ListByCountry area="French"></ListByCountry>*/}
+      {/*      <ListingArea></ListingArea>*/}
+      {/*      <ListByCountry area="French"></ListByCountry>*/}
     </div>
   );
 }
