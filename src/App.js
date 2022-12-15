@@ -9,6 +9,8 @@ import { ListByTitre } from './requests/listByTitre';
 import { ListByCountry } from './requests/ListByCountry';
 import { ListingArea } from './requests/ListingArea';
 import { ListingCategory } from "./requests/ListingCategory";
+import { ListingIngredients } from './requests/ListingIngredients';
+
 function App() {
   return (
     <div className='App'>
@@ -17,16 +19,16 @@ function App() {
       <CuisineNavBar></CuisineNavBar>
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*       <MealByRandom></MealByRandom> */}
-      {/*      <ListByCategorySeafood></ListByCategory>*/}
-      {/*       <MealByID id="52846"></MealByID>*/}
       {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
-      {/*<ListByIngredient ingredient="chicken_breast"></ListByIngredient>*/}
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*      <MealByRandom></MealByRandom>*/}
-      {/*       <MealByID id="52846"></MealByID>*/}
       {/* <ListingArea></ListingArea> */}
       <ListingCategory></ListingCategory>
 {/*      <ListByCountry area="French"></ListByCountry>*/}
+      {/*<ListingArea></ListingArea>*/}
+      {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
+      <ListingIngredients></ListingIngredients>
+
     </div>
   );
 }
