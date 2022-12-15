@@ -8,6 +8,7 @@ import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
 import { ListByCountry } from './requests/ListByCountry';
 import { ListingArea } from './requests/ListingArea';
+import { ListingCategory } from "./requests/ListingCategory";
 function App() {
   return (
     <div className='App'>
@@ -23,7 +24,8 @@ function App() {
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*      <MealByRandom></MealByRandom>*/}
       {/*       <MealByID id="52846"></MealByID>*/}
-      <ListingArea></ListingArea>
+      {/* <ListingArea></ListingArea> */}
+      <ListingCategory></ListingCategory>
 {/*      <ListByCountry area="French"></ListByCountry>*/}
     </div>
   );
