@@ -4,9 +4,10 @@ import { CuisineNavBar } from "./components/NavBar";
 import { Titre } from './components/Titre';
 import { BoutonRandom } from './components/BoutonRandom';
 import { MealByRandom } from './requests/mealByRandom';
-import { AffichageRecette } from './components/affichageRecette';
+/* import { AffichageRecette } from './components/affichageRecette'; */
 import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
+import { ListByCountry } from './requests/ListByCountry';
 function App() {
   return (
     <div className='App'>
@@ -14,10 +15,9 @@ function App() {
       <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
       <CuisineNavBar></CuisineNavBar>
 {/*       <AffichageRecette></AffichageRecette> */}
-{/*       <MealByRandom></MealByRandom> */}
+      <MealByRandom></MealByRandom>
 {/*       <MealByID id="52846"></MealByID>*/}
-      <ListByTitre titre="salmon"></ListByTitre>
-
+{/*      <ListByCountry area="Canadian"></ListByCountry>*/}
     </div>
   );
 }
