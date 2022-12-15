@@ -25,7 +25,7 @@ function App() {
       <MealByRandom></MealByRandom>
 {/*       <MealByID id="52846"></MealByID>*/}
 {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
-      <ListingArea strArea = "#action/3.2"></ListingArea>
+      <ListingArea></ListingArea>
     </div>
   );
 }
