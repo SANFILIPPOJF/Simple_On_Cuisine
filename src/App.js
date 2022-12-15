@@ -8,6 +8,7 @@ import { MealByRandom } from './requests/mealByRandom';
 import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
 import { ListByCountry } from './requests/ListByCountry';
+import { ListingArea } from './requests/ListingArea';
 function App() {
   return (
     <div className='App'>
