@@ -23,7 +23,6 @@ export function ListingArea() {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    console.log(data);
     const listArea = data.map(area => {return(<li key={area.strArea}>{area.strArea}</li>)
     })
     return (

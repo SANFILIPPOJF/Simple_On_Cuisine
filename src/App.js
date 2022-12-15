@@ -8,6 +8,8 @@ import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
 import { ListByCountry } from './requests/ListByCountry';
 import { ListingArea } from './requests/ListingArea';
+import { ListingIngredients } from './requests/ListingIngredients';
+
 function App() {
   return (
     <div className='App'>
@@ -23,8 +25,14 @@ function App() {
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*      <MealByRandom></MealByRandom>*/}
       {/*       <MealByID id="52846"></MealByID>*/}
-      {/*      <ListingArea></ListingArea>*/}
+      {/*<ListingArea></ListingArea>*/}
       {/*      <ListByCountry area="French"></ListByCountry>*/}
+      {/*       <AffichageRecette></AffichageRecette> */}
+      {/*<MealByRandom></MealByRandom>*/}
+      {/*       <MealByID id="52846"></MealByID>*/}
+      {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
+      <ListingIngredients></ListingIngredients>
+
     </div>
   );
 }

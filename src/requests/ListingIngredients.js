@@ -1,17 +1,20 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export function ListByIngredient(props) {
+
+export function ListingIngredients() {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${props.ingredient}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
             .then(response => response.json())
-            .then((ingredientList) => {
+            .then((ingredientsArray) => {
                 setLoading(false);
-                setData(ingredientList.meals);
+                console.log(ingredientsArray);
+                setData(ingredientsArray.meals);
             })
             .catch((e) => {
                 console.error(`An error occurred: ${e}`)
@@ -20,13 +23,14 @@ export function ListByIngredient(props) {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    const listIngredient = data.map(ingredient => {
-        return (<li key={ingredient.idIngredient}>{ingredient.strIngredient}</li>)
+    console.log(data);
+    const listIngredients = data.map(ingredients => {
+        return(<li key={ingredients.strIngredient.replace(" ","_")}>{ingredients.strIngredient}</li>)
     })
     return (
         <>
             <ul>
-                {listIngredient}
+                {listIngredients}
             </ul>
         </>
     );
