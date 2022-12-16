@@ -26,11 +26,7 @@ export function ListingCategory() {
     }
     console.log("category", category);
     const listCat = data.map(cat => {
-<<<<<<< HEAD
-        return (<ListGroup.Item action href="#link1" variant="light" key={cat.strCategory}>{cat.strCategory}</ListGroup.Item>)
-=======
         return (<ListGroup.Item action key={cat.strCategory} onClick={() => setCategory(cat.strCategory)}>{cat.strCategory}</ListGroup.Item>)
->>>>>>> 2a23525e98a50c9cdd5539218e4622772d8858ff
     })
     return (
         <>
