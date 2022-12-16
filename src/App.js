@@ -1,9 +1,6 @@
 import './App.css';
 import { Titre } from './components/Titre';
 import { MealByRandom } from './requests/mealByRandom';
-import { MealByID } from './requests/mealByID';
-import { ListByTitre } from './requests/listByTitre';
-import { ListByCountry } from './requests/ListByArea';
 import { ListingArea } from './requests/ListingArea';
 import { ListingCategory } from "./requests/ListingCategory";
 import { ListingIngredients } from './requests/ListingIngredients';
@@ -11,7 +8,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
