@@ -56,7 +56,7 @@ function App() {
 
       {/*      <ListByCountry area="French"></ListByCountry>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
-      <MealByID meals={52928}></MealByID>
+      <MealByID></MealByID>
       <LocalStrage ></LocalStrage>
       {page === "favori" && <Favoris></Favoris>}
 

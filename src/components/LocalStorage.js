@@ -6,7 +6,13 @@ import { AffichageRecette } from "./affichageRecette";
 export function LocalStrage (){
     const local = JSON.parse(localStorage.getItem("favoriteMeal"));
     console.log(local);
-   
+    if (local != null){
+        return (   
+            <>
+            <AffichageRecette>mealArray={local.MealByID()}</AffichageRecette>
+            
+            </>)
+    }
 
     Button.onClick = () => {
         const meal = { meal: meal.value}
