@@ -13,7 +13,6 @@ export function ListingIngredients() {
             .then(response => response.json())
             .then((ingredientsArray) => {
                 setLoading(false);
-                console.log(ingredientsArray);
                 setData(ingredientsArray.meals);
             })
             .catch((e) => {

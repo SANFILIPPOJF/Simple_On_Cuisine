@@ -13,7 +13,6 @@ export function ListingArea() {
             .then(response => response.json())
             .then((areaArray) => {
                 setLoading(false);
-                console.log(areaArray);
                 setData(areaArray.meals);
             })
             .catch((e) => {

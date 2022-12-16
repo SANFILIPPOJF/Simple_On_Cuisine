@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import ListGroup from 'react-bootstrap/ListGroup';
+import { AffichageRecette } from "../components/affichageRecette";
+import { ListByCategory } from "./ListByCategory";
 
 export function ListingCategory() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [category,setCategory] = useState("");
 
 
 
@@ -12,7 +15,6 @@ export function ListingCategory() {
             .then(response => response.json())
             .then((catArray) => {
                 setLoading(false);
-                console.log(catArray);
                 setData(catArray.meals);
             })
             .catch((e) => {
@@ -22,16 +24,20 @@ export function ListingCategory() {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    console.log(data);
+    console.log("category", category);
     const listCat = data.map(cat => {
+<<<<<<< HEAD
         return (<ListGroup.Item action href="#link1" variant="light" key={cat.strCategory}>{cat.strCategory}</ListGroup.Item>)
+=======
+        return (<ListGroup.Item action key={cat.strCategory} onClick={() => setCategory(cat.strCategory)}>{cat.strCategory}</ListGroup.Item>)
+>>>>>>> 2a23525e98a50c9cdd5539218e4622772d8858ff
     })
     return (
         <>
-
             <ListGroup>
                 {listCat}
             </ListGroup>
+            {category.length>0 && <ListByCategory category={category}></ListByCategory>}
         </>
     );
 }

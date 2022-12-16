@@ -11,7 +11,6 @@ export function MealByRandom() {
         fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
             .then(response => response.json())
             .then((randomMeal) => {
-                console.log(randomMeal.meals[0].strMeal);
                 setLoading(false);
                 setData(randomMeal.meals);
             })

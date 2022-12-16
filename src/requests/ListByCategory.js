@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { AffichageRecette } from "../components/affichageRecette";
 
 
 
@@ -14,7 +15,6 @@ export function ListByCategory(props) {
         fetch(`http://www.themealdb.com/api/json/v1/1/filter.php?c=${props.category}`)
             .then(response => response.json())
             .then((category) => {
-                console.log(category.meals);
                 setLoading(false);
                 setData(category.meals);
             })
@@ -29,8 +29,7 @@ export function ListByCategory(props) {
     return (
         <>
             <div className="App">
-                {loading && <p>Loading...</p>}
-                {!loading && <p>Fetched data</p>}
+                <AffichageRecette mealArray={data}></AffichageRecette>
             </div>
         </>
     );
