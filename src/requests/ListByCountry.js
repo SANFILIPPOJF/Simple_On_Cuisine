@@ -13,7 +13,6 @@ export function ListByCountry(props) {
             .then(response => response.json())
             .then((country) => {
                 setLoading(false);
-                console.log(country.meals);
                 setData(country.meals);
             })
             .catch((e) => {

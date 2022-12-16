@@ -12,7 +12,6 @@ export function ListingCategory() {
             .then(response => response.json())
             .then((catArray) => {
                 setLoading(false);
-                console.log(catArray);
                 setData(catArray.meals);
             })
             .catch((e) => {
@@ -28,7 +27,6 @@ export function ListingCategory() {
     })
     return (
         <>
-
             <ListGroup>
                 {listCat}
             </ListGroup>

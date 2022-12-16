@@ -68,7 +68,6 @@ export function AffichageRecette(props) {
             </Accordion>
         </div>)}
     )
-    console.log(list);
     return (
         <>{ list }</>
     );

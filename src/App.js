@@ -16,7 +16,7 @@ import Form from 'react-bootstrap/Form';
 import React, { useState } from 'react';
 
 function App() {
-  const [page, setPage] = useState("acceuil");
+  const [page, setPage] = useState("accueil");
   return (
     <div className='App'>
       <Titre></Titre>
@@ -30,14 +30,14 @@ function App() {
         />
       </InputGroup>
       <div>
-        <button type="button" onClick={() => setPage("random")} className="btn btn-primary">Random</button>
+      {page === "accueil" && <button type="button" onClick={() => setPage("random")} className="btn btn-primary">Random</button>}
       </div>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home" onClick={() => setPage("acceuil")}>Home</Nav.Link>
+              <Nav.Link href="#home" onClick={() => setPage("accueil")}>Home</Nav.Link>
               <NavDropdown title="Search" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1" onClick={() => setPage("listCategory")}>By categories</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>

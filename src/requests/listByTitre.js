@@ -16,7 +16,6 @@ export function ListByTitre(props) {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${props.titre}`)
             .then(response => response.json())
             .then((meal) => {
-                console.log("bytitre",meal);
                 setLoading(false);
                 setData(meal);
             })
