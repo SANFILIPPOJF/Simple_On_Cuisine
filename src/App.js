@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='App'>
       <Titre></Titre>
-     <InputGroup>
+      <InputGroup>
         <InputGroup.Text id="btnGroupAddon">Search</InputGroup.Text>
         <Form.Control
           type="text"
@@ -28,7 +28,7 @@ function App() {
           aria-label="Input group"
           aria-describedby="btnGroupAddon"
         />
-  </InputGroup>
+      </InputGroup>
       <div>
         <button type="button" onClick={() => setPage("random")} className="btn btn-primary">Random</button>
       </div>
@@ -37,30 +37,26 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#home" onClick={() => setPage("acceuil")}>Home</Nav.Link>
               <NavDropdown title="Search" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">By categories</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">By area</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">By ingredients</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1" onClick={() => setPage("listCategory")}>By categories</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3" onClick={() => setPage("listIngredient")}>By ingredients</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link">Favoris</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
-</Navbar>
-      {page==="random" && <MealByRandom></MealByRandom>}
-      {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
-      {/*<ListByIngredient ingredient="chicken_breast"></ListByIngredient>*/}
+      </Navbar>
+      {page === "random" && <MealByRandom></MealByRandom>}
 
-      <MealByRandom></MealByRandom>
+      {page === "listCategory" && <ListingCategory></ListingCategory>}
+      {page === "listArea" && <ListingArea></ListingArea>}
+      {page === "listIngredient" && <ListingIngredients></ListingIngredients>}
 
-      {/*       <AffichageRecette></AffichageRecette> */}
-      {/* <ListingArea></ListingArea> */}
-      {/*<ListingCategory></ListingCategory>*/}
       {/*      <ListByCountry area="French"></ListByCountry>*/}
-      {/*<ListingArea></ListingArea>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
-      {/*<ListingIngredients></ListingIngredients>*/}
+      {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
 
     </div>
   );
