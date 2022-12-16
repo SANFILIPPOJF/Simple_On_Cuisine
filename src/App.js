@@ -2,7 +2,7 @@ import './App.css';
 import { BarreDeRecherche } from './components/BarreDeRecherche';
 import { CuisineNavBar } from "./components/NavBar";
 import { Titre } from './components/Titre';
-import { BoutonRandom } from './components/BoutonRandom';
+/* import { BoutonRandom } from './components/BoutonRandom'; */
 import { MealByRandom } from './requests/mealByRandom';
 import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='App'>
       <Titre></Titre>
-      <BarreDeRecherche></BarreDeRecherche><BoutonRandom></BoutonRandom>
+      <BarreDeRecherche></BarreDeRecherche>{/* <BoutonRandom></BoutonRandom> */}
       <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

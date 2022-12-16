@@ -3,6 +3,7 @@ import Figure from 'react-bootstrap/Figure';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
 export function AffichageRecette(props) {
@@ -61,6 +62,10 @@ export function AffichageRecette(props) {
                                 <Button href={meal.strSource} target="_blank" variant="info" size="lg">
                                     Source
                                 </Button>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"/>
+                                    <label class="btn btn-outline-success" for="btn-check-outlined">Favorite</label><br />
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>
