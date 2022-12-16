@@ -21,14 +21,15 @@ function App() {
   return (
     <div className='App'>
       <Titre></Titre>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="sm">
         <Container fluid>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
-              <Nav.Link href="#home" onClick={() => setPage("acceuil")}>Home</Nav.Link>
+              <Nav.Link href="#home" onClick={() => setPage("accueil")}>Home</Nav.Link>
               <NavDropdown title="Search" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action/3.1" onClick={() => setPage("listCategory")}>By categories</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>
@@ -57,7 +58,6 @@ function App() {
 
       {/*      <ListByCountry area="French"></ListByCountry>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
-      {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
 
     </div>
   );
