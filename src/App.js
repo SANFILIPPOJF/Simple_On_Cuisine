@@ -1,9 +1,5 @@
 import './App.css';
 import { Titre } from './components/Titre';
-<<<<<<< HEAD
-/* import { BoutonRandom } from './components/BoutonRandom'; */
-=======
->>>>>>> 415756234db81e6ba793450c488ff4a1d221f870
 import { MealByRandom } from './requests/mealByRandom';
 import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
@@ -24,7 +20,7 @@ function App() {
   return (
     <div className='App'>
       <Titre></Titre>
-     <InputGroup>
+      <InputGroup>
         <InputGroup.Text id="btnGroupAddon">Search</InputGroup.Text>
         <Form.Control
           type="text"
@@ -55,21 +51,12 @@ function App() {
       {page==="random" && <MealByRandom></MealByRandom>}
       {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
       {/*       <AffichageRecette></AffichageRecette> */}
-<<<<<<< HEAD
-      <MealByRandom></MealByRandom>
-      {/* <ListingArea></ListingArea> */}
-      <ListingCategory></ListingCategory>
-      {/* <ListingArea></ListingArea> */}
-      {/*<ListingArea></ListingArea>*/}
-            <ListingIngredients></ListingIngredients>
-=======
       {/* <ListingArea></ListingArea> */}
       {/*<ListingCategory></ListingCategory>*/}
       {/*      <ListByCountry area="French"></ListByCountry>*/}
       {/*<ListingArea></ListingArea>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
       {/*<ListingIngredients></ListingIngredients>*/}
->>>>>>> 415756234db81e6ba793450c488ff4a1d221f870
 
     </div>
   );
