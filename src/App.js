@@ -46,7 +46,7 @@ function App() {
       {/*      <MealByRandom></MealByRandom>*/}
       {/* <ListingArea></ListingArea> */}
       <ListingCategory></ListingCategory>
-      {/*      <ListByCountry area="French"></ListByCountry>*/}
+      {/*<ListByCountry area="French"></ListByCountry>*/}
       {/*<ListingArea></ListingArea>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
       <ListingIngredients></ListingIngredients>
