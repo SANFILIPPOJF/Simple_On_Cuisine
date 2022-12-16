@@ -15,6 +15,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
+import { LocalStrage } from './components/LocalStorage';
+import { Favoris } from './pages/Favoris';
 
 function App() {
   const [page, setPage] = useState("accueil");
@@ -35,7 +37,7 @@ function App() {
                 <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3" onClick={() => setPage("listIngredient")}>By ingredients</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link">Favorite</Nav.Link>
+              <Nav.Link href="#link" onClick={() => setPage("favori")}>Favorite</Nav.Link>
               <Nav.Link onClick={() => setPage("random") }>Random</Nav.Link>
             </Nav>
             <Form className="d-flex">
@@ -59,6 +61,8 @@ function App() {
       {/*      <ListByCountry area="French"></ListByCountry>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
       <MealByID meals={52928}></MealByID>
+      <LocalStrage ></LocalStrage>
+      {page === "favori" && <Favoris></Favoris>}
 
     </div>
   );
