@@ -38,12 +38,10 @@ function App() {
             </Container>
         </Navbar>
       {/*       <ListByCountry area="Canadian"></ListByCountry>*/}
-<<<<<<< HEAD
       {/*<ListByIngredient ingredient="chicken_breast"></ListByIngredient>*/}
 
       <MealByRandom></MealByRandom>
 
-=======
       {/*       <AffichageRecette></AffichageRecette> */}
       {/*      <MealByRandom></MealByRandom>*/}
       {/* <ListingArea></ListingArea> */}
@@ -52,7 +50,6 @@ function App() {
       {/*<ListingArea></ListingArea>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
       <ListingIngredients></ListingIngredients>
->>>>>>> d42c09934a80bde19a50d1a7bcfc7b375b465159
 
     </div>
   );
