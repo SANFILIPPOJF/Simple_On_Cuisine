@@ -64,8 +64,8 @@ export function AffichageRecette(props) {
                                 </Button>
                             </ListGroup.Item>
                             <ListGroup.Item>
-                                <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"/>
-                                    <label class="btn btn-outline-success" for="btn-check-outlined">Favorite</label><br />
+                                <input type="checkbox" className="btn-check" id="btn-check-outlined" autoComplete="off"/>
+                                    <label className="btn btn-outline-success" htmlFor="btn-check-outlined">Favorite</label><br />
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ListByIngredient } from "./ListByIngredient";
 
 
 export function ListingIngredients() {
@@ -6,7 +7,7 @@ export function ListingIngredients() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
+    const [ingredient,setIngredient] = useState("");
 
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
@@ -22,15 +23,16 @@ export function ListingIngredients() {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    console.log(data);
     const listIngredients = data.map(ingredients => {
-        return(<li key={ingredients.strIngredient.replace(" ","_")}>{ingredients.strIngredient}</li>)
+        let strIngredient = ingredients.strIngredient.replace(" ","_")
+        return(<li key={strIngredient} onClick={() => setIngredient(strIngredient)}>{ingredients.strIngredient}</li>)
     })
     return (
         <>
             <ul>
                 {listIngredients}
             </ul>
+            {ingredient.length>0 && <ListByIngredient ingredient={ingredient}></ListByIngredient>}
         </>
     );
 }
