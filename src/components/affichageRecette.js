@@ -3,13 +3,14 @@ import Figure from 'react-bootstrap/Figure';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
 export function AffichageRecette(props) {
     const list = props.mealArray.map(meal =>{
-        return(<div key={meal.idMeal} className="App ms-auto">
-            <Accordion className="justify-content-end">
-                <Accordion.Header className="justify-content-end">
+        return(<div key={meal.idMeal} className="App">
+            <Accordion>
+                <Accordion.Header>
                     <Figure className="mx-auto">
                         <Figure.Image
                             width={400}
@@ -23,7 +24,7 @@ export function AffichageRecette(props) {
                     </Figure>
                 </Accordion.Header>
                 <Accordion.Body>
-                    <Card style={{ width: '50rem' }}>
+                    <Card>
                         <ListGroup variant="flush">
                             <ListGroup.Item><h5>Category :</h5> {meal.strCategory}</ListGroup.Item>
                             <ListGroup.Item><h5>Area :</h5> {meal.strArea}</ListGroup.Item>
@@ -61,6 +62,10 @@ export function AffichageRecette(props) {
                                 <Button href={meal.strSource} target="_blank" variant="info" size="lg">
                                     Source
                                 </Button>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off"/>
+                                    <label class="btn btn-outline-success" for="btn-check-outlined">Favorite</label><br />
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>
