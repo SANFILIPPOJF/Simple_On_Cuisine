@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 import Accordion from 'react-bootstrap/Accordion';
+import Figure from 'react-bootstrap/Figure';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
+import { AffichageRecette } from "../components/affichageRecette";
 
 export function ListByTitre(props) {
 
@@ -11,7 +16,7 @@ export function ListByTitre(props) {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${props.titre}`)
             .then(response => response.json())
             .then((meal) => {
-                console.log(meal);
+                console.log("bytitre",meal);
                 setLoading(false);
                 setData(meal);
             })
@@ -23,18 +28,10 @@ export function ListByTitre(props) {
         return (<p>Loading...</p>)
     }
     return (
-        data.forEach(element => {
-                <div className="App">
-                    <Accordion className='' defaultActiveKey="0">
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header><h2 className="titre" style={{ fontSize: "3rem", color: "teal" }}>{element.strMeal}</h2><br/>
-                                <img src={element.strMealThumb} alt="image" /></Accordion.Header>
-                            <Accordion.Body>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
-                </div>
-        })
-        
-    );
+        <>
+            <div className="App">
+                <AffichageRecette mealArray={data}></AffichageRecette>
+            </div>
+        </>
+    )
 }
