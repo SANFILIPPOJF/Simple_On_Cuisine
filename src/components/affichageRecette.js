@@ -7,9 +7,9 @@ import Button from 'react-bootstrap/Button';
 
 export function AffichageRecette(props) {
     const list = props.mealArray.map(meal =>{
-        return(<div key={meal.idMeal} className="App ms-auto">
-            <Accordion className="justify-content-end">
-                <Accordion.Header className="justify-content-end">
+        return(<div key={meal.idMeal} className="App">
+            <Accordion>
+                <Accordion.Header>
                     <Figure className="mx-auto">
                         <Figure.Image
                             width={400}
@@ -23,7 +23,7 @@ export function AffichageRecette(props) {
                     </Figure>
                 </Accordion.Header>
                 <Accordion.Body>
-                    <Card style={{ width: '50rem' }}>
+                    <Card>
                         <ListGroup variant="flush">
                             <ListGroup.Item><h5>Category :</h5> {meal.strCategory}</ListGroup.Item>
                             <ListGroup.Item><h5>Area :</h5> {meal.strArea}</ListGroup.Item>
