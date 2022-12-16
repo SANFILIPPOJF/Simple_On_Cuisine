@@ -36,7 +36,7 @@ function App() {
                 <NavDropdown.Item href="#action/3.3" onClick={() => setPage("listIngredient")}>By ingredients</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link">Favorite</Nav.Link>
-              <Nav.Link onClick={() => setPage("random")}>Random</Nav.Link>
+              <Nav.Link onClick={() => setPage("random") }>Random</Nav.Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control
@@ -58,6 +58,7 @@ function App() {
 
       {/*      <ListByCountry area="French"></ListByCountry>*/}
       {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
+      <MealByID meals={52928}></MealByID>
 
     </div>
   );

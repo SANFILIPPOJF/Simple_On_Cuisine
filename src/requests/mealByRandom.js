@@ -6,8 +6,7 @@ export function MealByRandom() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
-
-    useEffect(() => {
+    let randomFetch = () => {
         fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
             .then(response => response.json())
             .then((randomMeal) => {
@@ -17,11 +16,18 @@ export function MealByRandom() {
             .catch((e) => {
                 console.error(`An error occurred: ${e}`)
             });
+    }
+    useEffect(() => {
+        randomFetch();
     }, []);
     if (loading){
         return (<p>Loading...</p>)
     }
     return (
+        <>
         <AffichageRecette mealArray={data}></AffichageRecette>
+
+        <button onClick={randomFetch}>rejouer</button>
+        </>
     );
 }
