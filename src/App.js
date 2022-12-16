@@ -4,6 +4,7 @@ import { MealByRandom } from './requests/mealByRandom';
 import { ListingArea } from './requests/ListingArea';
 import { ListingCategory } from "./requests/ListingCategory";
 import { ListingIngredients } from './requests/ListingIngredients';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,6 +12,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
+import { ListByTitre } from './requests/listByTitre';
 
 function App() {
   const [page, setPage] = useState("accueil");
@@ -41,7 +43,7 @@ function App() {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-success" onClick={() => setPage("listByTitre")}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
@@ -51,9 +53,8 @@ function App() {
       {page === "listCategory" && <ListingCategory></ListingCategory>}
       {page === "listArea" && <ListingArea></ListingArea>}
       {page === "listIngredient" && <ListingIngredients></ListingIngredients>}
+      {page === "listByTitre" && <ListByTitre></ListByTitre>}
 
-      {/*      <ListByCountry area="French"></ListByCountry>*/}
-      {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
     </div>
   );
 }

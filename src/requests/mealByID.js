@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 export function MealByID(props) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    console.log(props.id)
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${props.id}`)
             .then(response => response.json())
