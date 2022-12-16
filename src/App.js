@@ -3,7 +3,7 @@ import { Titre } from './components/Titre';
 import { MealByRandom } from './requests/mealByRandom';
 import { MealByID } from './requests/mealByID';
 import { ListByTitre } from './requests/listByTitre';
-import { ListByCountry } from './requests/ListByCountry';
+import { ListByCountry } from './requests/ListByArea';
 import { ListingArea } from './requests/ListingArea';
 import { ListingCategory } from "./requests/ListingCategory";
 import { ListingIngredients } from './requests/ListingIngredients';

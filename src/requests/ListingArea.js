@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-
+import { ListByArea } from "./ListByArea";
 
 export function ListingArea() {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-
+    const [area,setArea] = useState("");
 
 
     useEffect(() => {
@@ -22,13 +22,14 @@ export function ListingArea() {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    const listArea = data.map(area => {return(<li key={area.strArea}>{area.strArea}</li>)
+    const listArea = data.map(area => {return(<li key={area.strArea} onClick={() => setArea(area.strArea)}>{area.strArea}</li>)
     })
     return (
         <>
             <ul>
                 {listArea}
             </ul>
+            {area.length>0 && <ListByArea area={area}></ListByArea>}
         </>
     );
 }

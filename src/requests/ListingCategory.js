@@ -24,7 +24,6 @@ export function ListingCategory() {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    console.log("category", category);
     const listCat = data.map(cat => {
         return (<ListGroup.Item action key={cat.strCategory} onClick={() => setCategory(cat.strCategory)}>{cat.strCategory}</ListGroup.Item>)
     })

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { AffichageRecette } from "../components/affichageRecette";
 
 export function ListByIngredient(props) {
 

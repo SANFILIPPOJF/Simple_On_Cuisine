@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { AffichageRecette } from "../components/affichageRecette";
 
-export function ListByCountry(props) {
+export function ListByArea(props) {
 
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
