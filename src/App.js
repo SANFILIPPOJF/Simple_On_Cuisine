@@ -13,6 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 
 function App() {
@@ -20,31 +21,31 @@ function App() {
   return (
     <div className='App'>
       <Titre></Titre>
-      <InputGroup>
-        <InputGroup.Text id="btnGroupAddon">Search</InputGroup.Text>
-        <Form.Control
-          type="text"
-          placeholder="Name the meal"
-          aria-label="Input group"
-          aria-describedby="btnGroupAddon"
-        />
-      </InputGroup>
-      <div>
-        <button type="button" onClick={() => setPage("random")} className="btn btn-primary">Random</button>
-      </div>
       <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+        <Container fluid>
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: '100px' }}
+              navbarScroll>
               <Nav.Link href="#home" onClick={() => setPage("acceuil")}>Home</Nav.Link>
-              <NavDropdown title="Search" id="basic-nav-dropdown">
+              <NavDropdown title="Search" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action/3.1" onClick={() => setPage("listCategory")}>By categories</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3" onClick={() => setPage("listIngredient")}>By ingredients</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link">Favoris</Nav.Link>
+              <Nav.Link href="#link">Favorite</Nav.Link>
+              <Nav.Link onClick={() => setPage("random")}>Random</Nav.Link>
             </Nav>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Name the meal"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
