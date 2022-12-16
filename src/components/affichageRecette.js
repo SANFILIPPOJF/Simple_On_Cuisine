@@ -11,7 +11,7 @@ export function AffichageRecette(props) {
         return(<div key={meal.idMeal} className="App">
             <Accordion>
                 <Accordion.Header>
-                    <Figure className="mx-auto">
+                    <Figure>
                         <Figure.Image
                             width={400}
                             height={400}

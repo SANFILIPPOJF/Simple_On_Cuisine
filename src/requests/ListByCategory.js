@@ -12,7 +12,7 @@ export function ListByCategory(props) {
     useEffect(() => {
 
         {/*const category = { method: 'GET' };*/}
-        fetch(`http://www.themealdb.com/api/json/v1/1/filter.php?c=${props.category}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${props.category}`)
             .then(response => response.json())
             .then((category) => {
                 setLoading(false);

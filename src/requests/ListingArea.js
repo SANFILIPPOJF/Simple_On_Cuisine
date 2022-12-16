@@ -22,7 +22,8 @@ export function ListingArea() {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    const listArea = data.map(area => {return(<li key={area.strArea} onClick={() => setArea(area.strArea)}>{area.strArea}</li>)
+    const listArea = data.map(area => {
+        return(<li key={area.strArea} onClick={() => setArea(area.strArea)}>{area.strArea}</li>)
     })
     return (
         <>
