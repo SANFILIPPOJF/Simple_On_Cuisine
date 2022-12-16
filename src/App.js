@@ -49,6 +49,7 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      
       {page === "random" && <MealByRandom></MealByRandom>}
 
       {page === "listCategory" && <ListingCategory></ListingCategory>}

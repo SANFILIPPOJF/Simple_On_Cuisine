@@ -24,7 +24,7 @@ export function ListingCategory() {
     }
     console.log(data);
     const listCat = data.map(cat => {
-        return (<ListGroup.Item action key={cat.strCategory}>{cat.strCategory}</ListGroup.Item>)
+        return (<ListGroup.Item action href="#link1" variant="light" key={cat.strCategory}>{cat.strCategory}</ListGroup.Item>)
     })
     return (
         <>
