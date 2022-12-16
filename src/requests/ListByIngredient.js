@@ -20,14 +20,11 @@ export function ListByIngredient(props) {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    const listIngredient = data.map(ingredient => {
-        return (<li key={ingredient.idIngredient}>{ingredient.strIngredient}</li>)
-    })
     return (
         <>
-            <ul>
-                {listIngredient}
-            </ul>
+            <div className="App">
+                <AffichageRecette mealArray={data}></AffichageRecette>
+            </div>
         </>
     );
 }
