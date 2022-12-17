@@ -4,6 +4,7 @@ import { MealByRandom } from './requests/mealByRandom';
 import { ListingArea } from './requests/ListingArea';
 import { ListingCategory } from "./requests/ListingCategory";
 import { ListingIngredients } from './requests/ListingIngredients';
+import { MealByID } from "./requests/mealByID";
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
