@@ -1,13 +1,8 @@
-import Accordion from 'react-bootstrap/Accordion';
-import Figure from 'react-bootstrap/Figure';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { MealByID } from '../requests/mealByID';
 
 
 export function AffichageRecette(props) {
-    const list = props.mealArray.map(meal =>{
+    /* const list = props.mealArray.map(meal =>{
         return(<div key={meal.idMeal} className="App">
             <Accordion>
                 <Accordion.Header>
@@ -71,10 +66,17 @@ export function AffichageRecette(props) {
                     </Card>
                 </Accordion.Body>
             </Accordion>
-        </div>)}
+        </div>)} */
+    const list = props.mealArray.map(meal => {
+        return (<div key={meal.idMeal} className="App">
+        <MealByID id={meal.idMeal}></MealByID>
+        </div>)
+    }
     )
     return (
-        <>{ list }</>
+        <>
+        {list}
+        </>
     );
 
 }

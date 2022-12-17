@@ -1,9 +1,4 @@
 import { useState, useEffect } from "react";
-import Accordion from 'react-bootstrap/Accordion';
-import Figure from 'react-bootstrap/Figure';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
 import { AffichageRecette } from "../components/affichageRecette";
 
 export function ListByTitre(props) {
