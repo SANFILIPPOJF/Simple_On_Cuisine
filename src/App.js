@@ -14,6 +14,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 import { ListByTitre } from './requests/listByTitre';
+import { MenuDuJour } from './pages/MenuDuJour';
 
 function App() {
   const [page, setPage] = useState("accueil");
@@ -55,12 +56,12 @@ function App() {
       {page === "listArea" && <ListingArea></ListingArea>}
       {page === "listIngredient" && <ListingIngredients></ListingIngredients>}
       {page === "listByTitre" && <ListByTitre></ListByTitre>}
+      {page === "accueil" && <MenuDuJour></MenuDuJour>}
 
 
+      {/*      <ListByCountry area="French"></ListByCountry>*/}
+      {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
 
-      {/*      <ListByCountry area="French"></ListByCountry>*/ }
-  {/*      <ListByCountry area="Canadian"></ListByCountry>*/ }
-  <MealByID meals={52928}></MealByID>
 
     </div >
   );

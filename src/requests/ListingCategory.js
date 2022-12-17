@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ListGroup from 'react-bootstrap/ListGroup';
 import { ListByCategory } from "./ListByCategory";
 
 export function ListingCategory() {
