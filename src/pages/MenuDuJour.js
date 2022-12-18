@@ -1,6 +1,6 @@
 import { SetPasta } from "../requests/SetDessert";
 import { SetDessert } from "../requests/SetPasta";
-import { SetStarter } from "../requests/SetSarter";
+import { SetStarter } from "../requests/SetStarter";
 export function MenuDuJour() {
     return(
         <>

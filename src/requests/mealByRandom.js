@@ -32,7 +32,7 @@ export function MealByRandom() {
         <>
         <AffichageRecette mealArray={data}></AffichageRecette>
 
-            <Button onClick={randomFetch} variant="info" className = 'btnRandom'>New recipe random</Button>{' '}
+            <Button onClick={randomFetch} variant="info" className = 'btnRandom'>New random recipe</Button>{' '}
         </>
     );
 }

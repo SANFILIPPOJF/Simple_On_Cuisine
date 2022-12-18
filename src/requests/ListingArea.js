@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ListByArea } from "./ListByArea";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export function ListingArea() {
 
@@ -23,14 +24,13 @@ export function ListingArea() {
         return (<p>Loading...</p>)
     }
     const listArea = data.map(area => {
-        return(<li key={area.strArea} onClick={() => setArea(area.strArea)}>{area.strArea}</li>)
+        return (<NavDropdown.Item key={area.strArea} href="#action/3.1" onClick={() => setArea(area.strArea)}>
+        {area.strArea}
+        </NavDropdown.Item>)
     })
     return (
         <>
-            <ul>
                 {listArea}
-            </ul>
-            {area.length>0 && <ListByArea area={area}></ListByArea>}
         </>
     );
 }

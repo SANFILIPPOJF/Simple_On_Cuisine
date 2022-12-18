@@ -22,7 +22,6 @@ export function MealByID(props) {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    console.log(data.strIngredient1)
     return (
         <Accordion>
             <Accordion.Header>

@@ -4,7 +4,6 @@ import { MealByRandom } from './requests/mealByRandom';
 import { ListingArea } from './requests/ListingArea';
 import { ListingCategory } from "./requests/ListingCategory";
 import { ListingIngredients } from './requests/ListingIngredients';
-import { MealByID } from "./requests/mealByID";
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -15,6 +14,7 @@ import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 import { ListByTitre } from './requests/listByTitre';
 import { MenuDuJour } from './pages/MenuDuJour';
+import { ListByIngredient } from './requests/ListByIngredient';
 
 function App() {
   const [page, setPage] = useState("accueil");
@@ -30,11 +30,15 @@ function App() {
               style={{ maxHeight: '100px' }}
               navbarScroll>
               <Nav.Link href="#home" onClick={() => setPage("accueil")}>Home</Nav.Link>
-              <NavDropdown title="Search" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action/3.1" onClick={() => setPage("listCategory")}>By categories</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" onClick={() => setPage("listIngredient")}>By ingredients</NavDropdown.Item>
+              <NavDropdown title="Category" id="navbarScrollingDropdown">
+                <ListingCategory></ListingCategory>
               </NavDropdown>
+              <NavDropdown title="Area" id="navbarScrollingDropdown">
+                <ListingArea></ListingArea>
+              </NavDropdown>
+{/*              <NavDropdown title="Ingredient" id="navbarScrollingDropdown">
+                <ListByIngredient></ListByIngredient>
+                </NavDropdown>*/}
               <Nav.Link href="#link">Favorite</Nav.Link>
               <Nav.Link onClick={() => setPage("random")}>Random</Nav.Link>
             </Nav>
@@ -57,11 +61,6 @@ function App() {
       {page === "listIngredient" && <ListingIngredients></ListingIngredients>}
       {page === "listByTitre" && <ListByTitre></ListByTitre>}
       {page === "accueil" && <MenuDuJour></MenuDuJour>}
-
-
-      {/*      <ListByCountry area="French"></ListByCountry>*/}
-      {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
-
 
     </div >
   );

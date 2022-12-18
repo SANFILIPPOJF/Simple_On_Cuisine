@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { MealByID } from "./mealByID";
 
 export function SetStarter() {
-    const [data, setData] = useState(null);
+    const [dataStarter, setStarter] = useState(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Starter`)
             .then(response => response.json())
             .then((category) => {
                 setLoading(false);
-                setData(category.meals);
+                setStarter(category.meals);
             })
             .catch((e) => {
                 console.error(`An error occurred: ${e}`)
@@ -22,7 +22,7 @@ export function SetStarter() {
     return (
         <>
             <div className="App">
-                <MealByID id={data[Math.floor(Math.random() * data.length)].idMeal}></MealByID>
+                <MealByID id={dataStarter[Math.floor(Math.random() * dataStarter.length)].idMeal}></MealByID>
             </div>
         </>
 
