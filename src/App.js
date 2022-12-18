@@ -14,10 +14,15 @@ import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 import { ListByTitre } from './requests/listByTitre';
 import { MenuDuJour } from './pages/MenuDuJour';
-import { ListByIngredient } from './requests/ListByIngredient';
+
 
 function App() {
   const [page, setPage] = useState("accueil");
+  const [favoris, setFavoris] = useState(JSON.parse(localStorage.getItem("favoris")));
+  const ToggleFavoris = (id) => {
+    const newFavoris = [...favoris];
+    console.log(newFavoris);
+  }
   return (
     <div className='App'>
       <Titre></Titre>

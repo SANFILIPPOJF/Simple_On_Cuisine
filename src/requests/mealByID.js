@@ -3,11 +3,16 @@ import Figure from 'react-bootstrap/Figure';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Favoris } from '../pages/Favoris';
 
 export function MealByID(props) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [items, setItems] = React.useState(false);
+    const handelToggle = () => {
+        setItems(!items);};
+
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${props.id}`)
             .then(response => response.json())
@@ -78,8 +83,8 @@ export function MealByID(props) {
                             </Button>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <input type="checkbox" className="btn-check" id="btn-check-outlined" autoComplete="off" />
-                            <label className="btn btn-outline-success" htmlFor="btn-check-outlined">Favorite</label><br />
+                            <input type="checkbox" id="btnFavorite btn-check-outlined" className="btn-check" autoComplete="off" />
+                            <label onClick={handelToggle} className="btn btn-outline-success" htmlFor="btn-check-outlined">Favorite</label> {items && <div>{MealByID}</div>} <br />
                         </ListGroup.Item>
                     </ListGroup>
                 </Card>
@@ -87,3 +92,8 @@ export function MealByID(props) {
         </Accordion>
     )
 }
+/*    id="btnFavorite"
+const [btnFavorite, setBtnFavorite] = useState([]);
+
+        localStorage.setItem('btnFavorite', JSON.stringify(btnFavorite));
+    },[btnFavorite]);*/
