@@ -4,6 +4,7 @@ import { MealByRandom } from './requests/mealByRandom';
 import { ListingArea } from './requests/ListingArea';
 import { ListingCategory } from "./requests/ListingCategory";
 import { ListingIngredients } from './requests/ListingIngredients';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,11 +12,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
-import { LocalStrage } from './components/LocalStorage';
 import { Favoris } from './pages/Favoris';
 
 function App() {
   const [page, setPage] = useState("accueil");
+  const [favoris, setFavoris] = useState(JSON.parse(localStorage.getItem("favoris")));
+  const ToggleFavoris = (id) => {
+    const newFavoris = [...favoris];
+    console.log(newFavoris);
+  }
   return (
     <div className='App'>
       <Titre></Titre>
@@ -43,7 +48,7 @@ function App() {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-success" onClick={() => setPage("listByTitre")}>Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
@@ -53,13 +58,8 @@ function App() {
       {page === "listCategory" && <ListingCategory></ListingCategory>}
       {page === "listArea" && <ListingArea></ListingArea>}
       {page === "listIngredient" && <ListingIngredients></ListingIngredients>}
-
-      {/*      <ListByCountry area="French"></ListByCountry>*/}
-      {/*      <ListByCountry area="Canadian"></ListByCountry>*/}
-      <MealByID></MealByID>
-      <LocalStrage ></LocalStrage>
-      {page === "favori" && <Favoris></Favoris>}
-
+    
+      {page === "favoris" && <Favoris></Favoris>}
     </div>
   );
 }
