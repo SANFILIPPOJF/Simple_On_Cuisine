@@ -38,7 +38,7 @@ function App() {
                 <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3" onClick={() => setPage("listIngredient")}>By ingredients</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link" onClick={() => setPage("favori")}>Favorite</Nav.Link>
+              <Nav.Link href="#link" onClick={() => setPage("favoris")}>Favorite</Nav.Link>
               <Nav.Link onClick={() => setPage("random") }>Random</Nav.Link>
             </Nav>
             <Form className="d-flex">

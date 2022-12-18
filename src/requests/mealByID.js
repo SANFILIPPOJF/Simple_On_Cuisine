@@ -83,7 +83,7 @@ export function MealByID(props) {
                             </Button>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <input type="checkbox" id="btnFavorite" className="btn-check" id="btn-check-outlined" autoComplete="off" />
+                            <input type="checkbox" id="btnFavorite btn-check-outlined" className="btn-check" autoComplete="off" />
                             <label onClick={handelToggle} className="btn btn-outline-success" htmlFor="btn-check-outlined">Favorite</label> {items && <div>{MealByID}</div>} <br />
                         </ListGroup.Item>
                     </ListGroup>
