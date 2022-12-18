@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { AffichageRecette } from "../components/affichageRecette";
+import Button from 'react-bootstrap/Button';
+
 
 export function MealByRandom() {
 
@@ -30,7 +32,7 @@ export function MealByRandom() {
         <>
         <AffichageRecette mealArray={data}></AffichageRecette>
 
-        <button onClick={randomFetch}>rejouer</button>
+            <Button onClick={randomFetch} variant="info" className = 'btnRandom'>New random recipe</Button>{' '}
         </>
     );
 }

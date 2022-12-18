@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
-import { AffichageRecette } from "../components/affichageRecette";
+import { MealByID } from "./mealByID";
 
-export function ListByTitre(props) {
-
-    const [data, setData] = useState(null);
+export function SetDessert() {
+    const [dataPasta, SetPasta] = useState(null);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${props.titre}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert`)
             .then(response => response.json())
-            .then((meal) => {
+            .then((category) => {
                 setLoading(false);
-                setData(meal);
+                SetPasta(category.meals);
             })
             .catch((e) => {
                 console.error(`An error occurred: ${e}`)
             });
+
     }, []);
     if (loading) {
         return (<p>Loading...</p>)
@@ -23,8 +22,9 @@ export function ListByTitre(props) {
     return (
         <>
             <div className="App">
-                <AffichageRecette mealArray={data}></AffichageRecette>
+                <MealByID id={dataPasta[Math.floor(Math.random() * dataPasta.length)].idMeal}></MealByID>
             </div>
         </>
-    )
+
+    );
 }

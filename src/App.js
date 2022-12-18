@@ -12,7 +12,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Favoris } from './pages/Favoris';
+=======
+import { ListByTitre } from './requests/listByTitre';
+import { MenuDuJour } from './pages/MenuDuJour';
+import { ListByIngredient } from './requests/ListByIngredient';
+>>>>>>> 9e20ef0bbeaded4637de82bc768aec004159f416
 
 function App() {
   const [page, setPage] = useState("accueil");
@@ -26,20 +32,29 @@ function App() {
       <Titre></Titre>
       <Navbar bg="light" expand="sm">
         <Container fluid>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
               <Nav.Link href="#home" onClick={() => setPage("accueil")}>Home</Nav.Link>
-              <NavDropdown title="Search" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action/3.1" onClick={() => setPage("listCategory")}>By categories</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2" onClick={() => setPage("listArea")}>By area</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" onClick={() => setPage("listIngredient")}>By ingredients</NavDropdown.Item>
+              <NavDropdown title="Category" id="navbarScrollingDropdown">
+                <ListingCategory></ListingCategory>
               </NavDropdown>
+<<<<<<< HEAD
               <Nav.Link href="#link" onClick={() => setPage("favoris")}>Favorite</Nav.Link>
               <Nav.Link onClick={() => setPage("random") }>Random</Nav.Link>
+=======
+              <NavDropdown title="Area" id="navbarScrollingDropdown">
+                <ListingArea></ListingArea>
+              </NavDropdown>
+{/*              <NavDropdown title="Ingredient" id="navbarScrollingDropdown">
+                <ListByIngredient></ListByIngredient>
+                </NavDropdown>*/}
+              <Nav.Link href="#link">Favorite</Nav.Link>
+              <Nav.Link onClick={() => setPage("random")}>Random</Nav.Link>
+>>>>>>> 9e20ef0bbeaded4637de82bc768aec004159f416
             </Nav>
             <Form className="d-flex">
               <Form.Control
@@ -53,14 +68,21 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {page === "random" && <MealByRandom></MealByRandom>}
 
+      {page === "random" && <MealByRandom></MealByRandom>}
       {page === "listCategory" && <ListingCategory></ListingCategory>}
       {page === "listArea" && <ListingArea></ListingArea>}
       {page === "listIngredient" && <ListingIngredients></ListingIngredients>}
+<<<<<<< HEAD
     
       {page === "favoris" && <Favoris></Favoris>}
     </div>
+=======
+      {page === "listByTitre" && <ListByTitre></ListByTitre>}
+      {page === "accueil" && <MenuDuJour></MenuDuJour>}
+
+    </div >
+>>>>>>> 9e20ef0bbeaded4637de82bc768aec004159f416
   );
 }
 

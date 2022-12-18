@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ListByIngredient } from "./ListByIngredient";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 export function ListingIngredients() {
@@ -23,16 +24,15 @@ export function ListingIngredients() {
     if (loading) {
         return (<p>Loading...</p>)
     }
-    const listIngredients = data.map(ingredients => {
-        let strIngredient = ingredients.strIngredient.replace(" ","_")
-        return(<li key={strIngredient} onClick={() => setIngredient(strIngredient)}>{ingredients.strIngredient}</li>)
+    const listIngredients = data.map(ingred => {
+        let strIngredient = ingred.strIngredient.replace(" ","_")
+        return (<NavDropdown.Item key={strIngredient} href="#action/3.1" onClick={() => setIngredient(strIngredient)}>
+        {ingred.strIngredient}
+        </NavDropdown.Item>)
     })
     return (
         <>
-            <ul>
                 {listIngredients}
-            </ul>
-            {ingredient.length>0 && <ListByIngredient ingredient={ingredient}></ListByIngredient>}
         </>
     );
 }
