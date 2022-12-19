@@ -48,26 +48,26 @@ export function MealByID(props) {
                         <ListGroup.Item><h5>Category :</h5> {data.strCategory}</ListGroup.Item>
                         <ListGroup.Item><h5>Area :</h5> {data.strArea}</ListGroup.Item>
                         <ListGroup.Item><h5>ingredients :</h5>
-                            {data.strIngredient1.length>1 && <>{data.strMeasure1} {data.strIngredient1}<br /></>}
-                            {data.strIngredient2.length>1 && <>{data.strMeasure2} {data.strIngredient2}<br /></>}
-                            {data.strIngredient3.length>1 && <>{data.strMeasure3} {data.strIngredient3}<br /></>}
-                            {data.strIngredient4.length>1 && <>{data.strMeasure4} {data.strIngredient4}<br /></>}
-                            {data.strIngredient5.length>1 && <>{data.strMeasure5} {data.strIngredient5}<br /></>}
-                            {data.strIngredient6.length>1 && <>{data.strMeasure6} {data.strIngredient6}<br /></>}
-                            {data.strIngredient7.length>1 && <>{data.strMeasure7} {data.strIngredient7}<br /></>}
-                            {data.strIngredient8.length>1 && <>{data.strMeasure8} {data.strIngredient8}<br /></>}
-                            {data.strIngredient9.length>1 && <>{data.strMeasure9} {data.strIngredient9}<br /></>}
-                            {data.strIngredient10.length>1 && <>{data.strMeasure10} {data.strIngredient10}<br /></>}
-                            {data.strIngredient11.length>1 && <>{data.strMeasure11} {data.strIngredient11}<br /></>}
-                            {data.strIngredient12.length>1 && <>{data.strMeasure12} {data.strIngredient12}<br /></>}
-                            {data.strIngredient13.length>1 && <>{data.strMeasure13} {data.strIngredient13}<br /></>}
-                            {data.strIngredient14.length>1 && <>{data.strMeasure14} {data.strIngredient14}<br /></>}
-                            {data.strIngredient15.length>1 && <>{data.strMeasure15} {data.strIngredient15}<br /></>}
-                            {data.strIngredient16.length>1 && <>{data.strMeasure16} {data.strIngredient16}<br /></>}
-                            {data.strIngredient17.length>1 && <>{data.strMeasure17} {data.strIngredient17}<br /></>}
-                            {data.strIngredient18.length>1 && <>{data.strMeasure18} {data.strIngredient18}<br /></>}
-                            {data.strIngredient19.length>1 && <>{data.strMeasure19} {data.strIngredient19}<br /></>}
-                            {data.strIngredient20.length>1 && <>{data.strMeasure20} {data.strIngredient20}<br /></>}
+                            {data.strMeasure1} {data.strIngredient1}<br />
+                            {data.strMeasure2} {data.strIngredient2}<br />
+                            {data.strMeasure3} {data.strIngredient3}<br />
+                            {data.strMeasure4} {data.strIngredient4}<br />
+                            {data.strMeasure5} {data.strIngredient5}<br />
+                            {data.strMeasure6} {data.strIngredient6}<br />
+                            {data.strMeasure7} {data.strIngredient7}<br />
+                            {data.strMeasure8} {data.strIngredient8}<br />
+                            {data.strMeasure9} {data.strIngredient9}<br />
+                            {data.strMeasure10} {data.strIngredient10}<br />
+                            {data.strMeasure11} {data.strIngredient11}<br />
+                            {data.strMeasure12} {data.strIngredient12}<br />
+                            {data.strMeasure13} {data.strIngredient13}<br />
+                            {data.strMeasure14} {data.strIngredient14}<br />
+                            {data.strMeasure15} {data.strIngredient15}<br />
+                            {data.strMeasure16} {data.strIngredient16}<br />
+                            {data.strMeasure17} {data.strIngredient17}<br />
+                            {data.strMeasure18} {data.strIngredient18}<br />
+                            {data.strMeasure19} {data.strIngredient19}<br />
+                            {data.strMeasure20} {data.strIngredient20}<br />
                         </ListGroup.Item>
                         <ListGroup.Item><h5>Instructions :</h5>
                             {data.strInstructions}
@@ -83,7 +83,7 @@ export function MealByID(props) {
                             </Button>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <input type="checkbox" id="btnFavorite btn-check-outlined" className="btn-check" autoComplete="off" />
+                            <input type="checkbox" id="btnFavorite btn-check-outlined" className="btn-check"  autoComplete="off" />
                             <label onClick={handelToggle} className="btn btn-outline-success" htmlFor="btn-check-outlined">Favorite</label> {items && <div>{MealByID}</div>} <br />
                         </ListGroup.Item>
                     </ListGroup>

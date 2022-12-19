@@ -12,13 +12,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Favoris } from './pages/Favoris';
-=======
 import { ListByTitre } from './requests/listByTitre';
 import { MenuDuJour } from './pages/MenuDuJour';
 import { ListByIngredient } from './requests/ListByIngredient';
->>>>>>> 9e20ef0bbeaded4637de82bc768aec004159f416
 
 function App() {
   const [page, setPage] = useState("accueil");
@@ -42,10 +39,6 @@ function App() {
               <NavDropdown title="Category" id="navbarScrollingDropdown">
                 <ListingCategory></ListingCategory>
               </NavDropdown>
-<<<<<<< HEAD
-              <Nav.Link href="#link" onClick={() => setPage("favoris")}>Favorite</Nav.Link>
-              <Nav.Link onClick={() => setPage("random") }>Random</Nav.Link>
-=======
               <NavDropdown title="Area" id="navbarScrollingDropdown">
                 <ListingArea></ListingArea>
               </NavDropdown>
@@ -54,7 +47,6 @@ function App() {
                 </NavDropdown>*/}
               <Nav.Link href="#link">Favorite</Nav.Link>
               <Nav.Link onClick={() => setPage("random")}>Random</Nav.Link>
->>>>>>> 9e20ef0bbeaded4637de82bc768aec004159f416
             </Nav>
             <Form className="d-flex">
               <Form.Control
@@ -73,16 +65,10 @@ function App() {
       {page === "listCategory" && <ListingCategory></ListingCategory>}
       {page === "listArea" && <ListingArea></ListingArea>}
       {page === "listIngredient" && <ListingIngredients></ListingIngredients>}
-<<<<<<< HEAD
-    
-      {page === "favoris" && <Favoris></Favoris>}
-    </div>
-=======
       {page === "listByTitre" && <ListByTitre></ListByTitre>}
       {page === "accueil" && <MenuDuJour></MenuDuJour>}
 
     </div >
->>>>>>> 9e20ef0bbeaded4637de82bc768aec004159f416
   );
 }
 
