@@ -12,10 +12,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Favoris } from './pages/Favoris';
+=======
 import { ListByTitre } from './requests/listByTitre';
 import { MenuDuJour } from './pages/MenuDuJour';
 import { ListByIngredient } from './requests/ListByIngredient';
+
 
 function App() {
   const [page, setPage] = useState("accueil");

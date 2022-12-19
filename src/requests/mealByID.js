@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import React, { useState, useEffect } from "react";
-import { Favoris } from '../pages/Favoris';
 
 export function MealByID(props) {
     const [data, setData] = useState(null);
